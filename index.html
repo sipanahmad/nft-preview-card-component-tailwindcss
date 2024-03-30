@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+    @layer utilities {
+      .bg-linear-container {
+  background: linear-gradient(161.11deg, #13396b -0.73%, rgba(21, 39, 63, 0.3) 101.82%);
+      }
+      .bg-linear-body{
+        background: linear-gradient(180deg, #0D1A2D 0%, #042D5E 100%);
+    	}
+    	.bg-url{
+    		  background: url(./images/icon-view.svg) no-repeat center;
+    		  background-color:hsla(178, 100%, 50%, 0.5);
+    	}
+    }
+  </style>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors:
+           {
+           'primary-soft-blue': 'hsl(215, 51%, 70%)',
+            'primary-cyan':'hsl(178, 100%, 50%)',
+            'neutral-very-dark-blue-main':'hsl(217, 54%, 11%)',
+	    'neutral-very-dark-blue-card': 'hsl(216, 50%, 16%)',
+	    'neutral-very-dark-blue-line': 'hsl(215, 32%, 27%)',
+	    'neutral-white': 'hsl(0, 0%, 100%)',
+          },
+          fontFamily:{
+          	'outfit':['Outfit', 'sans-serif'],
+          },
+          animation: {
+        	'slideIn': 'slideIn 1.5s ease',
+      },
+       keyframes: {
+        slideIn: {
+          '0%': {filter:'saturate(2)', transform: 'scale(0.7)', opacity: '0' },
+    	'100%': { transform:'scale(1)', filter: 'saturate(1)' },
+        	},
+        }
+      }
+    }
+    }
+  </script>
+</head>
+<body class="font-outfit text-lg flex justify-center items-center min-h-screen bg-linear-body" >
+ <main>
+    <div class="flex flex-col max-w-[350px] p-6 bg-linear-container rounded-2xl shadow-[5px_5px_15px_5px_rgba(0, 0, 0, 0.1)] transition ease-in-out duration-700 scale-100  animate-slideIn hover:saturate-150 hover:drop-shadow-[17px_15px_22px_rgba(0, 0, 0, 0.)] hover:transition hover:ease-in-out hover:duration-700 hover:border hover:border-[#ffffff23] hover:scale-95 ">
+      <div class="relative">
+        <img class="block w-full rounded-md hover:rotate-180" src="./images/image-equilibrium.jpg" alt="NFT Equilibrium">
+ 
+        <div class="flex absolute rounded-md items-center justify-center flex-col top-0 left-0 w-full h-full opacity-0 transition ease-in-out duration-700 bg-url  hover:opacity-100 group ">
+          <img class="scale-[150%] transition ease-out duration-700 group-hover:scale-[100%]  " src="./images/icon-view.svg" alt="Icon View" width="48" height="48">
+        </div>
+      </div>
+      <h1 class="font-semibold pt-8 text-xl text-neutral-white cursor-pointer hover:font-bold duration-700">Equilibrium #3429</h1>
+      <p class="text-primary-soft-blue pt-8">Our Equilibrium collection promotes balance and calm.</p>
+      <ul class=" flex flex-wrap justify-between items-center pt-8">
+        <li class="flex items-center text-primary-cyan font-semibold"><img src="./images/icon-ethereum.svg" alt="icon-ethereum" class="mr-2"/> 0.041 ETH</li>
+        <li class="flex items-center text-primary-soft-blue"><img src="./images/icon-clock.svg" alt="icon-clock" class="mr-2"/> 3 days left</li>
+      </ul>
+
+      <span class="flex w-auto h-[1px] mt-6 bg-neutral-very-dark-blue-line"> </span>
+      <div class="flex items-center justify-start pt-[18px] pb-4">
+        <img src="./images/image-avatar.png" class="w-8 h-8 mr-3 border border-neutral-white rounded-[50px]" alt="Avatar" width="132" height="132">
+        <h2 class="font-light text-[1.1rem] text-primary-soft-blue">Creation of <a class="text-neutral-white hover:text-primary-soft-blue duration-700 ease-in-out" href="https://www.frontendmentor.io/profile/correlucas">Jules Wyvern</a></h2>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
