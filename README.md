@@ -26,8 +26,8 @@ Desktop Design
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/results-summary-component-using-tailwindcss-ck5DtdRoNM)
-- Live Site URL: [Demo](https://results-summary-component-tailwindcss.vercel.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/nft-preview-card-component-challenge-IdScFNpbqH)
+- Live Site URL: [Demo](https://nft-preview-card-component-tailwindcss-gray.vercel.app/)
 
 ## My process
 
